@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aivlev</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 30px;
+            opacity: 0;
+            transform: translateY(15px);
+            animation: fadeIn 0.6s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.8rem;
+            margin: 15px 0;
+        }
+        a {
+            color: #ff4171;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ff6b91;
+        }
+        .btn {
+            display: inline-block;
+            padding: 18px 30px;
+            margin-top: 30px;
+            background: #ff4171;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            transition: transform 0.2s ease, background 0.2s ease;
+            user-select: none;
+            touch-action: manipulation;
+            position: relative;
+        }
+        .btn:hover {
+            background: #ff6b91;
+            transform: scale(1.05);
+        }
+        .btn:active {
+            background: #e6365f;
+            transform: scale(1);
+        }
+        .btn:focus {
+            outline: none;
+            background: #ff4171;
+        }
+        .btn:active, .btn:focus-visible {
+            color: white !important;
+        }
+        .btn::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            background: transparent;
+            transition: background 0.2s ease;
+        }
+        .btn:active::after {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.7rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            .btn {
+                font-size: 1.5rem;
+                padding: 15px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ивлев Артём</h1>
+    <p>Телефон: <a href="tel:+79773477377">+7 977 347 7377</a></p>
+    <p>Email: <a href="mailto:aivlev@ro.ru">aivlev@ro.ru</a></p>
+    <p><a href="https://t.me/aivlev00" class="btn">Написать в Telegram</a></p>
+</body>
+</html>
